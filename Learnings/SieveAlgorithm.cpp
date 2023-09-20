@@ -1,4 +1,4 @@
-//Algorithm to calculate prime umbers
+//Algorithm to calculate prime numbers
 #include <iostream>
 #include <cmath>
 using std::cin, std::cout, std::endl;
