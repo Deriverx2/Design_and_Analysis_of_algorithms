@@ -3,18 +3,18 @@
 #include <cmath>
 using std::cin, std::cout, std::endl;
 
-int* Sieve(int n)
+bool* Sieve(int n)
 {
-    int* arr=new int[n+1];
+    bool* arr=new bool[n+1];
     for (int i = 0; i < n + 1; i++)
     {
-        arr[i] = i;
+        arr[i] = 1;
     }
     arr[0] = 0;
     arr[1] = 0;
     for (int i = 2; i <= sqrt(n); i++)
     {
-        if (arr[i] != 0)
+        if (arr[i])
         {
             int j = i * i;
             while (j <= n)
@@ -34,13 +34,13 @@ int main()
     int n;
     cout << "Enter a positive numbers: ";
     cin >> n;
-    int* prime = Sieve(n);
+    bool* prime = Sieve(n);
     cout<<"Prime numbers:";
     for (int i = 0; i < n + 1; i++)
     {
-        if (prime[i] != 0)
+        if (prime[i])
         {
-            cout<<prime[i]<<' ';
+            cout<<i<<' ';
         }
     }
     delete[] prime;
