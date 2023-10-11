@@ -1,4 +1,4 @@
-// Calculate nth fibonacci number(wont go beyond 46th term)
+// Calculate nth fibonacci number(wont go beyond 93th term)
 #include <iostream>
 
 using std::cin, std::cout, std::endl;
