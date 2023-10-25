@@ -6,4 +6,5 @@
 6. Dynamic Fibonacci Series
 7. Coin row problem
 8. Coin change problem
-9. 
+9. Coin collecting problem
+10. 
