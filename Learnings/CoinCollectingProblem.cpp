@@ -11,15 +11,6 @@ int max(int a, int b)
 
 void printCoins(int** sum, int m, int n)
 {
-    // cout << "We choose path ";
-    // for (int i = n - 1; i > 0; i = i - 2)
-    // {
-    //     if (sum[i] == sum[i - 1])
-    //     {
-    //         i--;
-    //     }
-    //     cout << coins[i] << ", ";
-    // }
     if(m<1 || n<1)return;
     if((sum[m][n])==sum[m-1][n]){
         printCoins(sum,m-1,n);
