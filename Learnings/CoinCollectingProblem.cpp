@@ -9,8 +9,9 @@ int max(int a, int b)
     return b;
 }
 
-void CoinPath(int** sum, int m, int n)
+void CoinPath(int** sum, int m=3, int n=1)
 {
+    
     if (m==0){
         while(n!=0){
             cout<<"-->("<<m+1<<","<<n+1<<")";
@@ -27,9 +28,13 @@ void CoinPath(int** sum, int m, int n)
         cout<<"-->(1,1)";
         return;
     }
-    cout<<m+1<<n+1<<endl;
-    if (sum[m][n]-1==sum[m][n-1]) CoinPath(sum,m,n-1);
-    else CoinPath(sum,m-1,n);
+    if (sum[m][n]-1==sum[m][n-1]){
+        cout<<m+1<<n+1<<endl;
+        CoinPath(sum,m,n-1);
+    }else{
+        cout<<m+1<<n+1<<endl;
+        CoinPath(sum,m-1,n);
+    }
     cout<<"-->("<<m+1<<","<<n+1<<")";
     
     return;
@@ -70,7 +75,9 @@ void CCP(bool** coins, int m,int n)
     
     cout << endl << "Largest value=" << sum[m-1][n-1] << endl;
     
-    CoinPath(sum, m-1, n-1);
+    // CoinPath(sum, m-1, n-1);
+    CoinPath(sum);
+    // 
     
     for(int i = 0; i <n; i++)
         delete sum[i];
