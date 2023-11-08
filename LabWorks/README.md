@@ -7,4 +7,6 @@
 7. Coin row problem
 8. Coin change problem
 9. Coin collecting problem
-10. 
+10. Minimum cost path in a matrix
+11. 0/1 Knapsack Problem
+12. 
