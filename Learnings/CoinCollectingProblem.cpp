@@ -55,7 +55,20 @@ void CCP(bool** coins, int m,int n)
         }
     }
     
-    cout << "Largest value=" << sum[m-1][n-1] << endl;
+    cout<<endl<<"\tSum"<<endl<<" ";
+    for (int i=0;i<n;i++){
+        cout<<" "<<i+1;
+    }
+    cout<<endl;
+    for (int i=0;i<m;i++){
+        cout<<i+1;
+        for (int j=0;j<n;j++){
+            cout<<" "<<sum[i][j];
+        }
+        cout<<endl;
+    }
+    
+    cout << endl << "Largest value=" << sum[m-1][n-1] << endl;
     
     CoinPath(sum, m-1, n-1);
     
