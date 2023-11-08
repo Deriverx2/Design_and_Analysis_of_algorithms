@@ -29,10 +29,10 @@ void CoinPath(int** sum, int m=3, int n=1)
         return;
     }
     if (sum[m][n]-1==sum[m][n-1]){
-        cout<<m+1<<n+1<<endl;
+        // cout<<m+1<<n+1<<endl;
         CoinPath(sum,m,n-1);
     }else{
-        cout<<m+1<<n+1<<endl;
+        // cout<<m+1<<n+1<<endl;
         CoinPath(sum,m-1,n);
     }
     cout<<"-->("<<m+1<<","<<n+1<<")";
@@ -75,9 +75,9 @@ void CCP(bool** coins, int m,int n)
     
     cout << endl << "Largest value=" << sum[m-1][n-1] << endl;
     
-    // CoinPath(sum, m-1, n-1);
-    CoinPath(sum);
-    // 
+    CoinPath(sum, m-1, n-1);
+    // CoinPath(sum);
+    // // 
     
     for(int i = 0; i <n; i++)
         delete sum[i];
