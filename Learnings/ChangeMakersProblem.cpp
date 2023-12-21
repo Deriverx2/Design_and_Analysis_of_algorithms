@@ -1,4 +1,4 @@
-//Problem to find minimum no of coins required from given denomination
+// Problem to find minimum no of coins required from given denomination
 #include <iostream>
 using std::cin, std::cout, std::endl;
 
@@ -23,6 +23,7 @@ void printCoins(int *count, int n, int *coins, int d)
             i--;
         }
     }
+    cout << endl;
     return;
 }
 
@@ -44,6 +45,7 @@ void minCoins(int value, int *coins, int d)
         }
         ++count[i];
     }
+    cout << endl;
     if (count[value - 1] != INT_MAX)
     {
         cout << "Number of coins required: " << count[value - 1] << endl;
@@ -58,18 +60,24 @@ void minCoins(int value, int *coins, int d)
 
 int main()
 {
+    cout << endl;
     int n;
     cout << "Enter number of denomination coins: ";
     cin >> n;
     int nCoins[n];
+    cout << endl;
     cout << "Enter value of denomination coins: ";
     for (int i = 0; i < n; i++)
     {
         cin >> nCoins[i];
     }
     int amount;
+    cout << endl;
+
     cout << "Enter amount to find change of: ";
     cin >> amount;
     minCoins(amount + 1, nCoins, n);
+    cout << endl;
+
     return 0;
 }
